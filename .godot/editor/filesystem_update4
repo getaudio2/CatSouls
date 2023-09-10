@@ -1,3 +1,16 @@
-res://main.tscn
 res://world.tscn
+res://State.gd
+res://main.tscn
 res://BG.tscn
+res://Player/Player.tscn
+res://Frog.gd
+res://State Machine.gd
+res://Scenes/world.tscn
+res://Scenes/main.tscn
+res://Scripts/EnemyIdle.gd
+res://Scenes/BG.tscn
+res://Scripts/main.gd
+res://Scripts/Frog.gd
+res://Scripts/EnemyFollow.gd
+res://Player/Player.gd
+res://Scripts/State Machine.gd

@@ -1,0 +1,93 @@
+[gd_scene load_steps=14 format=3 uid="uid://dlitkd7p4lf8p"]
+
+[ext_resource type="PackedScene" uid="uid://clwwrajuv7pxy" path="res://Player/Player.tscn" id="1_pnxi2"]
+[ext_resource type="Script" path="res://Scripts/Frog.gd" id="2_ctl50"]
+[ext_resource type="Texture2D" uid="uid://ct3d875vv2i5c" path="res://Sunny-land-files/Sunny-land-assets-files/PNG/sprites/frog/idle/frog-idle-1.png" id="3_jrvff"]
+[ext_resource type="Texture2D" uid="uid://bb7xwfgjpwurv" path="res://Sunny-land-files/Sunny-land-assets-files/PNG/sprites/frog/idle/frog-idle-2.png" id="4_bwb60"]
+[ext_resource type="Texture2D" uid="uid://boj3knkunagpk" path="res://Sunny-land-files/Sunny-land-assets-files/PNG/sprites/frog/idle/frog-idle-3.png" id="5_gbpni"]
+[ext_resource type="Texture2D" uid="uid://cs8pdqhg8asgx" path="res://Sunny-land-files/Sunny-land-assets-files/PNG/sprites/frog/idle/frog-idle-4.png" id="6_ik5ye"]
+[ext_resource type="Script" path="res://Scripts/State Machine.gd" id="7_rfvfw"]
+[ext_resource type="Script" path="res://Scripts/EnemyIdle.gd" id="8_nvs08"]
+[ext_resource type="Script" path="res://Scripts/EnemyFollow.gd" id="9_tr716"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ursk6"]
+size = Vector2(1178, 257.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1obxn"]
+size = Vector2(130, 680)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_27mx3"]
+radius = 8.0
+height = 16.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mfq1a"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_jrvff")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_bwb60")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_gbpni")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ik5ye")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}]
+
+[node name="World" type="Node2D"]
+
+[node name="Player" parent="." groups=["Player"] instance=ExtResource("1_pnxi2")]
+position = Vector2(384, 336)
+scale = Vector2(3, 3)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(583, 633.75)
+shape = SubResource("RectangleShape2D_ursk6")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-64, 348)
+shape = SubResource("RectangleShape2D_1obxn")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1217, 320)
+shape = SubResource("RectangleShape2D_1obxn")
+
+[node name="Panel" type="Panel" parent="."]
+offset_top = 504.0
+offset_right = 1152.0
+offset_bottom = 736.0
+
+[node name="FrogEnemy" type="CharacterBody2D" parent="."]
+position = Vector2(752, 348)
+script = ExtResource("2_ctl50")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FrogEnemy"]
+position = Vector2(0, 4)
+scale = Vector2(2, 2)
+shape = SubResource("CapsuleShape2D_27mx3")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="FrogEnemy"]
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_mfq1a")
+animation = &"Idle"
+autoplay = "Idle"
+
+[node name="State Machine" type="Node" parent="FrogEnemy" node_paths=PackedStringArray("initial_state")]
+script = ExtResource("7_rfvfw")
+initial_state = NodePath("Follow")
+
+[node name="Idle" type="Node" parent="FrogEnemy/State Machine" node_paths=PackedStringArray("enemy")]
+script = ExtResource("8_nvs08")
+enemy = NodePath("../..")
+
+[node name="Follow" type="Node" parent="FrogEnemy/State Machine" node_paths=PackedStringArray("enemy")]
+script = ExtResource("9_tr716")
+enemy = NodePath("../..")

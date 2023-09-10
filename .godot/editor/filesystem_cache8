@@ -1,13 +1,18 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1692182619
-BG.tscn::PackedScene::6110867882580550929::1692029062::0::1::::<><>::uid://x0n2neqonmgn::::res://Sunny-land-files/Sunny-land-assets-files/PNG/environment/layers/back.png<>uid://bgos23cflfgth::::res://Sunny-land-files/Sunny-land-assets-files/PNG/environment/layers/middle.png
+::res://::1694355708
 icon.svg::CompressedTexture2D::9166807572733195354::1691436148::1691436157::1::::<><>::
-main.gd::GDScript::-1::1692025309::0::1::::<>Node2D<>::
-main.tscn::PackedScene::2583265811443435007::1692029062::0::1::::<><>::res://main.gd
-world.tscn::PackedScene::7949026041656265485::1692029062::0::1::::<><>::uid://clwwrajuv7pxy::::res://Player/Player.tscn
-::res://Player/::1692026168
+State.gd::GDScript::-1::1694355016::0::1::::State<>Node<>::
+::res://Player/::1694354523
 Player.gd::GDScript::-1::1692025740::0::1::::<>CharacterBody2D<>::
-Player.tscn::PackedScene::5591701105172406002::1692026168::0::1::::<><>::uid://b2qer4ih4q5jo
+Player.tscn::PackedScene::5591701105172406002::1694354523::0::1::::<><>::uid://b2qer4ih4q5jo::::res://Sunny-land-files/Sunny-land-assets-files/PNG/spritesheets/player-hurt.png<>res://Player/Player.gd<>uid://4cuxgslpa8nl::::res://Sunny-land-files/Sunny-land-assets-files/PNG/sprites/player/idle/player-idle-1.png<>uid://di7jljwtvvago::::res://Sunny-land-files/Sunny-land-assets-files/PNG/sprites/player/idle/player-idle-2.png<>uid://bb8wvt0dmcshw::::res://Sunny-land-files/Sunny-land-assets-files/PNG/sprites/player/idle/player-idle-3.png<>uid://k5jwtv8xpo7f::::res://Sunny-land-files/Sunny-land-assets-files/PNG/sprites/player/idle/player-idle-4.png<>uid://dxg8o6nuv0nqs::::res://Sunny-land-files/Sunny-land-assets-files/PNG/sprites/player/jump/player-jump-1.png<>uid://bk2q2jckqaqh1::::res://Sunny-land-files/Sunny-land-assets-files/PNG/sprites/player/jump/player-jump-2.png<>uid://bhr65ocqhpkqx::::res://Sunny-land-files/Sunny-land-assets-files/PNG/sprites/player/run/player-run-1.png<>uid://bcmhv22n208fk::::res://Sunny-land-files/Sunny-land-assets-files/PNG/sprites/player/run/player-run-2.png<>uid://crncmohi5ao1e::::res://Sunny-land-files/Sunny-land-assets-files/PNG/sprites/player/run/player-run-3.png<>uid://tkqvxu0qlgtv::::res://Sunny-land-files/Sunny-land-assets-files/PNG/sprites/player/run/player-run-4.png<>uid://m8gl6n4x17xk::::res://Sunny-land-files/Sunny-land-assets-files/PNG/sprites/player/run/player-run-5.png<>uid://88qyjey837ec::::res://Sunny-land-files/Sunny-land-assets-files/PNG/sprites/player/run/player-run-6.png
+::res://Scenes/::1694355708
+BG.tscn::PackedScene::6110867882580550929::1694354523::0::1::::<><>::uid://x0n2neqonmgn
+main.tscn::PackedScene::2583265811443435007::1694355705::0::1::::<><>::res://Scripts/main.gd
+world.tscn::PackedScene::7949026041656265485::1694355708::0::1::::<><>::uid://clwwrajuv7pxy::::res://Player/Player.tscn<>res://Scripts/Frog.gd<>uid://ct3d875vv2i5c::::res://Sunny-land-files/Sunny-land-assets-files/PNG/sprites/frog/idle/frog-idle-1.png<>uid://bb7xwfgjpwurv::::res://Sunny-land-files/Sunny-land-assets-files/PNG/sprites/frog/idle/frog-idle-2.png<>uid://boj3knkunagpk::::res://Sunny-land-files/Sunny-land-assets-files/PNG/sprites/frog/idle/frog-idle-3.png<>uid://cs8pdqhg8asgx::::res://Sunny-land-files/Sunny-land-assets-files/PNG/sprites/frog/idle/frog-idle-4.png<>res://Scripts/State Machine.gd
+::res://Scripts/::1694355708
+Frog.gd::GDScript::-1::1694354287::0::1::::FrogEnemy<>CharacterBody2D<>::
+main.gd::GDScript::-1::1692025309::0::1::::<>Node2D<>::
+State Machine.gd::GDScript::-1::1694355575::0::1::::<>Node<>::
 ::res://Sunny Land houses/::1692021777
 ::res://Sunny Land houses/Sunny Land Trees Props Pack/::1692021507
 public-license.txt::TextFile::-1::1692021507::0::1::::<><>::

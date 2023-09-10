@@ -1,10 +1,10 @@
 [gd_scene load_steps=2 format=3 uid="uid://bc2mameqljpvb"]
 
-[ext_resource type="Script" path="res://main.gd" id="1_27mph"]
+[ext_resource type="Script" path="res://Scripts/main.gd" id="1_ydbca"]
 
 [node name="Main" type="Node2D"]
 position = Vector2(557, 348)
-script = ExtResource("1_27mph")
+script = ExtResource("1_ydbca")
 metadata/_edit_vertical_guides_ = [-59.0]
 
 [node name="Play" type="Button" parent="."]
